@@ -1,0 +1,26 @@
+/* components/popup-list/popup-list.wxss */
+.popup {
+  position: relative;
+}
+
+.popTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+}
+
+.popTop .btn.mode {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.popList {
+  position: relative;
+  top: 80rpx;
+  width: 100%;
+  height: calc(100% - 80rpx);
+}

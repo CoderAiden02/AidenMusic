@@ -1,0 +1,12 @@
+<!--components/popup-list/popup-list.wxml-->
+<van-popup show="{{ popShow }}" round position="bottom" custom-style="height: 60%;" class="popup" bind:click-overlay="onPopClose">
+  <view class="popTop">
+    <image class="btn mode" src="/packagePlayer/assets/images/player/black_play_{{playModeName}}.png" bindtap="onModeBtnTap" />
+    <van-icon name="cross" bindtap="onPopClose" />
+  </view>
+  <scroll-view class="popList" scroll-y enhanced show-scrollbar="{{false}}">
+    <block wx:for="{{playSongList}}" wx:key="id">
+      <song-item-v3 itemData="{{item}}" index="{{index + 1}}"></song-item-v3>
+    </block>
+  </scroll-view>
+</van-popup>
